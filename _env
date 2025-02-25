@@ -1,0 +1,4 @@
+SECRET_KEY = "Adicionar chave secreta"
+DEBUG = True
+ALLOWED_HOSTS = "Adicionar hosts permitidos"
+
