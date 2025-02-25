@@ -37,6 +37,8 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 PROJECT_APPS = [
     'home',
+    'authentication',
+    'blog',
 ]	
 
 INSTALLED_APPS = [
@@ -57,6 +59,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTH_USER_MODEL = "authentication.Person"
 
 ROOT_URLCONF = 'core.urls'
 
