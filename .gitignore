@@ -9,6 +9,13 @@ venv
 # Django banco de dados
 db.sqlite3
 
+# Ignorar arquivos compilados do Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+
 # Migrations
 **/migrations/__pycache__/
 **/migrations/*.pyc
