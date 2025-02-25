@@ -1,0 +1,20 @@
+# Ambiente Virtual
+.venv
+venv
+
+# Configurações locais
+.env
+.env.local
+
+# Django banco de dados
+db.sqlite3
+
+# Migrations
+**/migrations/__pycache__/
+**/migrations/*.pyc
+
+# Static files
+**/staticfiles/
+/Static
+/staticfiles
+
