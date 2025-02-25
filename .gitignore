@@ -24,3 +24,11 @@ db.sqlite3
 # Static files
 /staticfiles
 staticfiles/
+
+# Media Files
+/media
+
+# Arquivos Aleatórios
+*.py_old
+*.py_bkp
+*.py_new
