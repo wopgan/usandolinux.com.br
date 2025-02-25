@@ -55,6 +55,19 @@
     cursor: pointer;
 }
 
+.navbar.scrolled {
+    background-color: rgba(50, 50, 50, 0.8);
+    /* Transparência */
+    padding: 8px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu.show {
+    backdrop-filter: blur(8px);
+    /* Aplica blur apenas no menu */
+    background: rgba(50, 50, 50, 0.9);
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .nav-menu {
