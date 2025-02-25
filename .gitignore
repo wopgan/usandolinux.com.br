@@ -13,12 +13,13 @@ db.sqlite3
 *.pyc
 *.pyo
 *.pyd
-__pycache__/
+/__pycache__/
 
 
 # Migrations
 **/migrations/__pycache__/
 **/migrations/*.pyc
+/migrations/
 
 # Static files
 /staticfiles
