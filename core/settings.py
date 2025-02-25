@@ -132,17 +132,18 @@ USE_TZ = True
 
 # CKEditor Config
 
-CKEDITOR_UPLOAD_PATH = "uploads/"  # Pasta onde as imagens serão armazenadas
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
-        'height': 400,
-        'width': '100%',
-        'extraPlugins': ','.join([
-            'uploadimage',  # Plugin para upload de imagens
-        ]),
+        'extraPlugins': 'justify',
+        'stylesSet': [
+            {'name': 'Center Image', 'element': 'img',
+                'attributes': {'class': 'center-image'}},
+        ],
     },
 }
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
