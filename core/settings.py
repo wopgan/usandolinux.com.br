@@ -39,16 +39,22 @@ PROJECT_APPS = [
     'home',
     'authentication',
     'blog',
-]	
+]
+
+THIRD_PARTY_APPS = [
+    'ckeditor',
+    'ckeditor_uploader',
+]
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-] + PROJECT_APPS
+] + PROJECT_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,6 +130,19 @@ USE_I18N = True
 
 USE_TZ = True
 
+# CKEditor Config
+
+CKEDITOR_UPLOAD_PATH = "uploads/"  # Pasta onde as imagens serão armazenadas
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 400,
+        'width': '100%',
+        'extraPlugins': ','.join([
+            'uploadimage',  # Plugin para upload de imagens
+        ]),
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -132,7 +151,17 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'templates', 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Adm UsandoLinux",
+    "site_header": "Adm UsandoLinux",
+    "theme": "darkly",
+}

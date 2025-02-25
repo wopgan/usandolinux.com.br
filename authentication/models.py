@@ -39,7 +39,7 @@ class Person(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['email', 'name', 'surname']
 
     def __str__(self):
-        return self.name or self.username
+        return f"{self.name} {self.surname}" if self.name or self.surname else self.username
 
 
     class Meta:
