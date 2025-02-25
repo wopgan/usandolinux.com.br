@@ -4,19 +4,21 @@
     --bg-color: #323232;
     --text-color: #ffffff;
     --hover-color: #555555;
-    --btn-color: #1a73e8;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: var(--bg-color);
     padding: 12px 20px;
     font-family: 'SF Pro Display', sans-serif;
+    position: relative;
 }
 
 .brand {
+    position: absolute;
+    left: 20px;
     font-size: 20px;
     font-weight: 600;
     color: var(--text-color);
@@ -45,21 +47,6 @@
     color: var(--hover-color);
 }
 
-.login-btn {
-    background-color: var(--btn-color);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.login-btn:hover {
-    background-color: #1669c1;
-}
-
 .menu-toggle {
     display: none;
     font-size: 24px;
@@ -78,6 +65,7 @@
         background-color: var(--bg-color);
         width: 100%;
         padding: 10px;
+        text-align: center;
     }
 
     .nav-menu.show {
@@ -86,5 +74,7 @@
 
     .menu-toggle {
         display: block;
+        position: absolute;
+        right: 20px;
     }
 }
