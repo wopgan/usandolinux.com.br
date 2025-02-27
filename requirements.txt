@@ -29,3 +29,4 @@ python-dotenv==1.0.1
 sqlparse==0.5.3
 tzdata==2025.1
 uvicorn==0.34.0
+split==0.4
